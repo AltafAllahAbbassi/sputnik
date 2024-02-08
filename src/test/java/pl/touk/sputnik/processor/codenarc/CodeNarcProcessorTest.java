@@ -17,21 +17,21 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class CodeNarcProcessorTest {
-    private CodeNarcProcessor sut;
+    CodeNarcProcessor sut;
 
-    private static final String CONFIGURATION_WITH_BASIC_AND_IMPORT_RULE_SET_AND_EXCLUDE = "codeNarc/configuration/configurationWithBasicAndImportRuleSetAndExclude.properties";
-    private static final String CONFIGURATION_WITH_BASIC_RULE_SET = "codeNarc/configuration/configurationWithBasicRuleSet.properties";
-    private static final String CONFIGURATION_WITH_IMPORT_RULE_SET = "codeNarc/configuration/configurationWithImportRuleSet.properties";
-    private static final String CONFIGURATION_WITHOUT_RULE_SET = "codeNarc/configuration/configurationWithoutRuleSet.properties";
-    private static final String CONFIGURATION_WITH_BASIC_AND_IMPORT_RULE_SET = "codeNarc/configuration/configurationWithBasicAndImportRuleSet.properties";
+     static final String CONFIGURATION_WITH_BASIC_AND_IMPORT_RULE_SET_AND_EXCLUDE = "codeNarc/configuration/configurationWithBasicAndImportRuleSetAndExclude.properties";
+     static final String CONFIGURATION_WITH_BASIC_RULE_SET = "codeNarc/configuration/configurationWithBasicRuleSet.properties";
+     static final String CONFIGURATION_WITH_IMPORT_RULE_SET = "codeNarc/configuration/configurationWithImportRuleSet.properties";
+     static final String CONFIGURATION_WITHOUT_RULE_SET = "codeNarc/configuration/configurationWithoutRuleSet.properties";
+     static final String CONFIGURATION_WITH_BASIC_AND_IMPORT_RULE_SET = "codeNarc/configuration/configurationWithBasicAndImportRuleSet.properties";
 
-    private final String REVIEW_FILE_WITH_ONE_VIOLATION = "src/test/resources/codeNarc/testFiles/FileWithOneViolationLevel2.groovy";
-    private final String REVIEW_FILE_WITH_ONE_VIOLATION_PER_EACH_SEVERITY = "src/test/resources/codeNarc/testFiles/FileWithOneViolationPerEachLevel.groovy";
-    private final String REVIEW_FILE_WITHOUT_VIOLATIONS = "src/test/resources/codeNarc/testFiles/FileWithoutViolations.groovy";
-    private final String REVIEW_FILE_WITH_IMPORT_VIOLATION = "src/test/resources/codeNarc/testFiles/FileWithImportViolation.groovy";
-    private final String REVIEW_FILE_WITH_NOT_GROOVY_EXTENSION = "src/test/resources/wrongExtension.java";
+     final String REVIEW_FILE_WITH_ONE_VIOLATION = "src/test/resources/codeNarc/testFiles/FileWithOneViolationLevel2.groovy";
+     final String REVIEW_FILE_WITH_ONE_VIOLATION_PER_EACH_SEVERITY = "src/test/resources/codeNarc/testFiles/FileWithOneViolationPerEachLevel.groovy";
+     final String REVIEW_FILE_WITHOUT_VIOLATIONS = "src/test/resources/codeNarc/testFiles/FileWithoutViolations.groovy";
+     final String REVIEW_FILE_WITH_IMPORT_VIOLATION = "src/test/resources/codeNarc/testFiles/FileWithImportViolation.groovy";
+     final String REVIEW_FILE_WITH_NOT_GROOVY_EXTENSION = "src/test/resources/wrongExtension.java";
 
-    private Configuration config;
+     Configuration config;
 
     @BeforeEach
     void setUp() throws Exception {
@@ -194,7 +194,7 @@ class CodeNarcProcessorTest {
         assertThat(result.getViolations()).isEmpty();
     }
 
-    private Review getReview(String... filePaths) {
+    public Review getReview(String... filePaths) {
         List<ReviewFile> files = new ArrayList<>();
         for (String filePath : filePaths) {
             files.add(new ReviewFile(filePath));
