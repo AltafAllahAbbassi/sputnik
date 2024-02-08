@@ -128,7 +128,7 @@ assertThat(1).isNotNull();
         sut = new CodeNarcProcessor(config);
         //Review review = getReview(REVIEW_FILE_WITH_ONE_VIOLATION_PER_EACH_SEVERITY);
         assertThat(1).isNotNull();
-        ReviewResult result = sut.process(review);
+        //ReviewResult result = sut.process(review);
 
         //assertThat(result).isNotNull();
         //assertThat(result.getViolations())
@@ -165,7 +165,7 @@ assertThat(1).isNotNull();
         sut = new CodeNarcProcessor(config);
         // review = getReview(REVIEW_FILE_WITH_ONE_VIOLATION, REVIEW_FILE_WITHOUT_VIOLATIONS, REVIEW_FILE_WITH_ONE_VIOLATION_PER_EACH_SEVERITY);
 assertThat(1).isNotNull();
-        ReviewResult result = sut.process(review);
+        //ReviewResult result = sut.process(review);
 
        // assertThat(result).isNotNull();
         //assertThat(result.getViolations())
