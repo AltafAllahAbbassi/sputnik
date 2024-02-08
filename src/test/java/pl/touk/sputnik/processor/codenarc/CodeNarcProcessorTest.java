@@ -44,7 +44,8 @@ class CodeNarcProcessorTest {
         Review review = getReview(REVIEW_FILE_WITH_ONE_VIOLATION);
         
         ReviewResult result = sut.process(review);
-        assertTHat(1).isNotNull();
+        assertThat(1).isNotNull();
+
         //assertThat(result).isNotNull();
         //assertThat(result.getViolations())
                 //.hasSize(1)
